@@ -1,26 +1,82 @@
 * {
-  font-family: "Robotto";
+  font-family: "Robotto", sans-serif;
 }
-* .logo, * .title {
+* .navbar__logo, * .title {
   font-family: "Shrikhand";
 }
 
 :root {
   --main-bg-color: #F3F3F3;
-  --grey-2: #EAEAEA;
+  --location-grey: #EAEAEA;
   --primary-color: #9356DC;
   --second-color: #FF79DA;
   --third-color: #99E2D0;
   --dark-green: #008766;
   --light-blue: #89C8FA;
   --dark-blue: #003A68;
-  --footer-color: #353535;
+  --dark-grey: #353535;
   --footer-btn-text-color: #FFFFFF;
   --font-title-size: 24px;
   --font-size: 18px;
   --font-card-subtitle-size: 17px;
   --font-body-size: 16px;
   --font-new-alert-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.navbar__link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.navbar__logo {
+  width: 200px;
+  height: 34px;
+  margin: 30px 0;
+}
+.navbar .location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  width: 100%;
+  background-color: var(--location-grey);
+  padding: 16px 0;
+}
+.navbar .location__text {
+  margin: 0;
+  color: var(--dark-grey);
+  font-size: var(--font-body-size);
+}
+
+@media (max-width: 767.98px) {
+  .navbar__logo {
+    width: 197px;
+    height: 36px;
+    margin: 14px 0;
+    padding-top: 8px;
+  }
+}
+img {
+  width: 100px;
+  height: 100px;
 }
 
 /*# sourceMappingURL=main.css.map */
