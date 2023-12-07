@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
+
 * {
-  font-family: 'Robotto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   .navbar__logo, .title {
     font-family: 'Shrikhand';
@@ -16,7 +18,9 @@
   --light-blue: #89C8FA;
   --dark-blue: #003A68;
   --dark-grey: #353535;
+  --light-grey: #F6F6F6;
   --footer-btn-text-color: #FFFFFF;
+  --icon-fonctionnement: #7E7E7E;
 
   --font-title-size: 24px;
   --font-text-size: 18px;
@@ -31,6 +35,15 @@ body {
 
 .main-container {
   width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 180px;
+}
+
+.fa-solid {
+  color: var(--icon-fonctionnement);
 }
 
 a {
@@ -49,6 +62,7 @@ section {
 
 h2 {
   font-size: var(--font-title-size);
+  margin: 0;
 }
 
 // Navbar
@@ -114,7 +128,80 @@ h2 {
   }
 }
 
+// Fonctionnement
+.fonctionnement {
+  margin: 0;
+  padding: 50px 0;
+
+  &__cards {
+    display: flex;
+    gap: 24px;
+  }
+  &__title {
+    margin-bottom: 26px;
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  &__btn-number {
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 16px;
+    border: none;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    z-index: 1;
+  }
+  &__content {
+    display: flex;
+    gap: 26px;
+    border-radius: 20px;
+    background-color: var(--light-grey);
+    padding: 28px;
+    position: relative;
+    left: 12px;
+    width: 80%;
+    // width: 240px;;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  }
+  & .icon {
+    font-size: 20px;
+  }
+}
+
+.fonctionnement a {
+  width: 30%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 50px;
+  }
+
+  .fonctionnement {
+    &__cards {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+
+  .fonctionnement a {
+    width: 48%;
+  }
+}
+
 @media (max-width: 767.98px) {
+  .container {
+    padding: 0;
+  }
+
+  section {
+    padding-top: 30px;
+  }
+
   // Navbar
   .navbar {
     &__logo {
@@ -133,6 +220,25 @@ h2 {
       width: 76%;
       font-size: var(--font-title-size);
     }
+  }
+
+  // Fonctionnement
+  .fonctionnement {
+    margin: 0 20px;
+    padding: 48px 0;
+
+    &__cards {
+      display: block;
+    }
+    &__card {
+      padding-bottom: 24px;
+    }
+    &__content {
+      padding: 28px 38px;
+      // width: 74%;
+      width: 260px;
+    }
+
   }
 }
 
