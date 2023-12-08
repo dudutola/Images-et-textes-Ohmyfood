@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&family=Shrikhand&display=swap");
 * {
   font-family: "Roboto", sans-serif;
 }
-* .navbar__logo, * .title {
+* .navbar__logo, * .title, * .infos__logo {
   font-family: "Shrikhand";
 }
 
@@ -103,14 +104,11 @@ h2 {
   font-size: var(--font-card-subtitle-size);
 }
 
-img {
+.img-card {
   height: 200px;
   object-fit: cover;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
-}
-
-.img-card {
   position: relative;
   z-index: 1;
 }
@@ -239,6 +237,44 @@ img {
   flex-grow: 1;
 }
 
+.infos {
+  background-color: var(--dark-grey);
+  color: white;
+}
+.infos--padding {
+  padding: 64px 25px 30px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.infos__logo {
+  font-size: 18px;
+  padding-right: 44px;
+}
+.infos__content {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.infos__content--position {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+.infos .contact-partenaire {
+  margin-right: 40px;
+}
+.infos .contact {
+  margin-right: 70px;
+}
+
+.fa-utensils, .fa-handshake-angle {
+  color: white;
+}
+
+.fa-handshake-angle {
+  font-size: 12px;
+}
+
 @media (max-width: 1024px) {
   .container {
     padding: 0 50px;
@@ -249,6 +285,15 @@ img {
   }
   .fonctionnement a {
     width: 48%;
+  }
+  .infos__logo {
+    padding-right: 12px;
+  }
+  .infos .contact-partenaire {
+    margin-right: 20px;
+  }
+  .infos .contact {
+    margin-right: 40px;
   }
 }
 @media (max-width: 767.98px) {
@@ -298,6 +343,26 @@ img {
   .restaurants a {
     width: 100%;
     flex-grow: 0;
+  }
+  .infos--padding {
+    padding: 22px 25px;
+    display: block;
+  }
+  .infos__logo {
+    padding-right: 0;
+  }
+  .infos__content {
+    flex-direction: column;
+    align-items: normal;
+    padding-top: 16px;
+  }
+  .infos__content--position {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .infos .contact-partenaire, .infos .contact {
+    margin-right: 0;
   }
 }
 

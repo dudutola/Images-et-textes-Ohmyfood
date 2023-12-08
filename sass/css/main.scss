@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&family=Shrikhand&display=swap');
 
 * {
   font-family: 'Roboto', sans-serif;
 
-  .navbar__logo, .title {
+  .navbar__logo, .title, .infos__logo {
     font-family: 'Shrikhand';
   }
 }
@@ -112,7 +113,7 @@ h2 {
   }
 }
 
-img {
+.img-card {
   // width: 346px;
   // height: 185px;
   // height: 231px;
@@ -121,9 +122,6 @@ img {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   // object-position: 0 -163px;
-}
-
-.img-card {
   position: relative;
   z-index: 1;
 }
@@ -262,8 +260,51 @@ img {
       flex-grow: 1;
     }
   }
-
 }
+
+// footer
+.infos {
+  background-color: var(--dark-grey);
+  color: white;
+
+  &--padding {
+    padding: 64px 25px 30px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  &__logo {
+    font-size: 18px;
+    padding-right: 44px;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    &--position {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+  }
+  & .contact-partenaire {
+    margin-right: 40px;
+  }
+  & .contact {
+    margin-right: 70px;
+  }
+}
+
+.fa-utensils, .fa-handshake-angle {
+  color: white;
+}
+
+.fa-handshake-angle {
+  font-size: 12px;
+}
+
+
+
 
 
 
@@ -284,6 +325,19 @@ img {
 
   .fonctionnement a {
     width: 48%;
+  }
+
+  // infos
+  .infos {
+    &__logo {
+      padding-right: 12px;
+    }
+    & .contact-partenaire {
+      margin-right: 20px;
+    }
+    & .contact {
+      margin-right: 40px;
+    }
   }
 }
 
@@ -351,6 +405,31 @@ img {
     & a {
       width: 100%;
       flex-grow: 0;
+    }
+  }
+
+  // footer
+  .infos {
+    &--padding {
+      padding: 22px 25px;
+      display: block;
+    }
+    &__logo {
+      padding-right: 0;
+    }
+    &__content {
+      flex-direction: column;
+      align-items: normal;
+      padding-top: 16px;
+
+      &--position {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+      }
+    }
+    .contact-partenaire, .contact {
+      margin-right: 0;
     }
   }
 }
