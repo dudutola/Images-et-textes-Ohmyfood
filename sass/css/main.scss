@@ -38,12 +38,16 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  // max-width: 1440px;
   padding: 0 180px;
 }
 
 .fa-solid {
   color: var(--icon-fonctionnement);
+}
+
+.fa-heart {
+  font-size: 24px;
 }
 
 a {
@@ -63,6 +67,65 @@ section {
 h2 {
   font-size: var(--font-title-size);
   margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  // width: 89%;
+  border-radius: 15px;
+  // box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+
+  &__badge {
+    display: flex;
+    flex-direction: row-reverse;
+
+    &--nouveau {
+      position: absolute;
+      // right: 40px;
+      font-size: var(--font-new-alert-size);
+      border: none;
+      background-color: var(--third-color);
+      color: var(--dark-green);
+      padding: 7px 9px 6px;
+      margin-top: 15px;
+      margin-right: 15px;
+      border-radius: 2px;
+      z-index: 2;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 25px 16px 18px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: var(--font-text-size);
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: var(--font-card-subtitle-size);
+  }
+}
+
+img {
+  // width: 346px;
+  // height: 185px;
+  // height: 231px;
+  height: 200px;
+  object-fit: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  // object-position: 0 -163px;
+}
+
+.img-card {
+  position: relative;
+  z-index: 1;
 }
 
 // Navbar
@@ -176,6 +239,37 @@ h2 {
   width: 30%;
 }
 
+// Restaurants
+.restaurant-bg {
+  background-color: var(--main-bg-color);
+}
+
+.restaurants {
+  padding-top: 54px;
+  margin: 0;
+
+  &__title {
+    margin-bottom: 26px;
+  }
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 100px;
+
+    & a {
+      width: 30%;
+      flex-grow: 1;
+    }
+  }
+
+}
+
+
+
+
+
+
 @media (max-width: 1024px) {
   .container {
     padding: 0 50px;
@@ -200,6 +294,12 @@ h2 {
 
   section {
     padding-top: 30px;
+  }
+
+  .card {
+    &__content {
+      margin: 16px 25px 16px 16px;
+    }
   }
 
   // Navbar
@@ -238,13 +338,19 @@ h2 {
       // width: 74%;
       width: 260px;
     }
-
   }
-}
 
+  // Restaurants
+  .restaurants {
+    margin: 0 15px;
 
-// temporaire !!!!
-img {
-  width: 100px;
-  height: 100px;
+    &__cards {
+      flex-direction: column;
+      gap: 18px;
+    }
+    & a {
+      width: 100%;
+      flex-grow: 0;
+    }
+  }
 }
