@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;500&family=Shrikhand&display=swap");
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -36,7 +36,7 @@ body {
 }
 
 .container {
-  padding: 0 180px;
+  padding: 0;
 }
 
 .fa-solid {
@@ -92,7 +92,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 16px 25px 16px 18px;
+  margin: 16px 25px 16px 16px;
 }
 .card__title {
   margin: 0;
@@ -127,9 +127,10 @@ h2 {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .navbar__logo {
-  width: 200px;
-  height: 34px;
-  margin: 30px 0;
+  width: 197px;
+  height: 36px;
+  margin: 14px 0;
+  padding-top: 8px;
 }
 .navbar .location {
   display: flex;
@@ -152,9 +153,11 @@ h2 {
   align-items: center;
   text-align: center;
   background-color: var(--main-bg-color);
+  padding: 39px 34px 57px 26px;
 }
 .headline__title {
-  font-size: 40px;
+  width: 76%;
+  font-size: var(--font-title-size);
 }
 .headline__text {
   font-size: var(--font-text-size);
@@ -171,12 +174,11 @@ h2 {
 }
 
 .fonctionnement {
-  margin: 0;
-  padding: 50px 0;
+  margin: 0 20px;
+  padding: 48px 0;
 }
 .fonctionnement__cards {
-  display: flex;
-  gap: 24px;
+  display: block;
 }
 .fonctionnement__title {
   margin-bottom: 26px;
@@ -184,7 +186,7 @@ h2 {
 .fonctionnement__card {
   display: flex;
   align-items: center;
-  padding-bottom: 0;
+  padding-bottom: 24px;
 }
 .fonctionnement__btn-number {
   color: white;
@@ -201,18 +203,14 @@ h2 {
   gap: 26px;
   border-radius: 20px;
   background-color: var(--light-grey);
-  padding: 28px;
+  padding: 28px 38px;
   position: relative;
   left: 12px;
-  width: 80%;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  width: 260px;
 }
 .fonctionnement .icon {
   font-size: 20px;
-}
-
-.fonctionnement a {
-  width: 30%;
 }
 
 .restaurant-bg {
@@ -221,20 +219,20 @@ h2 {
 
 .restaurants {
   padding-top: 54px;
-  margin: 0;
+  padding-bottom: 66px;
+  margin: 0 15px;
 }
 .restaurants__title {
   margin-bottom: 26px;
 }
 .restaurants__cards {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 50px 100px;
+  flex-direction: column;
+  gap: 18px;
 }
 .restaurants__cards a {
-  width: 30%;
-  flex-grow: 1;
+  width: 100%;
+  flex-grow: 0;
 }
 
 .infos {
@@ -242,29 +240,27 @@ h2 {
   color: white;
 }
 .infos--padding {
-  padding: 64px 25px 30px;
-  display: flex;
-  flex-direction: row-reverse;
+  padding: 22px 25px;
+  display: block;
 }
 .infos__logo {
   font-size: 18px;
-  padding-right: 44px;
+  padding-right: 0;
 }
 .infos__content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: normal;
   gap: 7px;
+  padding-top: 16px;
 }
 .infos__content--position {
   display: flex;
   align-items: center;
   gap: 11px;
 }
-.infos .contact-partenaire {
-  margin-right: 40px;
-}
-.infos .contact {
-  margin-right: 70px;
+.infos .contact-partenaire, .infos .contact {
+  margin-right: 0;
 }
 
 .fa-utensils, .fa-handshake-angle {
@@ -275,94 +271,148 @@ h2 {
   font-size: 12px;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .container {
-    padding: 0 50px;
-  }
-  .fonctionnement__cards {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  .fonctionnement a {
-    width: 48%;
-  }
-  .infos__logo {
-    padding-right: 12px;
-  }
-  .infos .contact-partenaire {
-    margin-right: 20px;
-  }
-  .infos .contact {
-    margin-right: 40px;
-  }
-}
-@media (max-width: 767.98px) {
-  .container {
-    padding: 0;
-  }
-  section {
-    padding-top: 30px;
+    padding: 0 180px;
   }
   .card__content {
-    margin: 16px 25px 16px 16px;
+    margin: 16px 25px 16px 18px;
   }
   .navbar__logo {
-    width: 197px;
-    height: 36px;
-    margin: 14px 0;
-    padding-top: 8px;
-  }
-  .headline {
-    padding: 39px 34px 57px 26px;
+    width: 200px;
+    height: 34px;
+    margin: 30px 0;
   }
   .headline__title {
-    width: 76%;
-    font-size: var(--font-title-size);
+    font-size: 40px;
   }
   .fonctionnement {
-    margin: 0 20px;
-    padding: 48px 0;
+    margin: 0;
+    padding: 50px 0;
   }
   .fonctionnement__cards {
-    display: block;
+    display: flex;
+    gap: 24px;
   }
   .fonctionnement__card {
-    padding-bottom: 24px;
+    padding-bottom: 0;
   }
   .fonctionnement__content {
-    padding: 28px 38px;
-    width: 260px;
+    padding: 28px;
+    width: 80%;
+  }
+  .fonctionnement a {
+    width: 30%;
   }
   .restaurants {
-    margin: 0 15px;
+    margin: 0;
+    padding-bottom: 30px;
   }
   .restaurants__cards {
-    flex-direction: column;
-    gap: 18px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 100px;
   }
-  .restaurants a {
-    width: 100%;
-    flex-grow: 0;
+  .restaurants__cards a {
+    width: 30%;
+    flex-grow: 1;
   }
   .infos--padding {
-    padding: 22px 25px;
-    display: block;
+    padding: 64px 25px 30px;
+    display: flex;
+    flex-direction: row-reverse;
   }
   .infos__logo {
-    padding-right: 0;
+    padding-right: 44px;
   }
   .infos__content {
-    flex-direction: column;
-    align-items: normal;
-    padding-top: 16px;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
   }
   .infos__content--position {
     display: flex;
     align-items: center;
     gap: 11px;
   }
-  .infos .contact-partenaire, .infos .contact {
-    margin-right: 0;
+  .infos .contact-partenaire {
+    margin-right: 40px;
+  }
+  .infos .contact {
+    margin-right: 70px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1024px) {
+  .container {
+    padding: 0 90px;
+  }
+  .card__content {
+    margin: 16px 25px 16px 18px;
+  }
+  .navbar__logo {
+    width: 200px;
+    height: 34px;
+    margin: 30px 0;
+  }
+  .headline__title {
+    font-size: 40px;
+  }
+  .fonctionnement {
+    margin: 0;
+    padding: 50px 0;
+  }
+  .fonctionnement__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 24px;
+  }
+  .fonctionnement__card {
+    padding-bottom: 0;
+  }
+  .fonctionnement__content {
+    padding: 28px;
+    width: 80%;
+  }
+  .fonctionnement a {
+    width: 48%;
+  }
+  .restaurants {
+    margin: 0;
+    padding-bottom: 30px;
+  }
+  .restaurants__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 100px;
+  }
+  .restaurants__cards a {
+    width: 30%;
+    flex-grow: 1;
+  }
+  .infos--padding {
+    padding: 64px 25px 30px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .infos__logo {
+    padding-right: 12px;
+  }
+  .infos__content {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+  }
+  .infos__content--position {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
+  .infos .contact-partenaire {
+    margin-right: 20px;
+  }
+  .infos .contact {
+    margin-right: 40px;
   }
 }
 
