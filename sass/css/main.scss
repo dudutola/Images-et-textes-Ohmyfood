@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;500&family=Shrikhand&display=swap');
+
 * {
   font-family: 'Roboto', sans-serif;
+  // font-weight: normal;
 
   .navbar__logo, .title, .infos__logo {
     font-family: 'Shrikhand';
+    font-weight: normal;
   }
 }
 
@@ -21,6 +24,10 @@
   --light-grey: #F6F6F6;
   --footer-btn-text-color: #FFFFFF;
   --icon-fonctionnement: #7E7E7E;
+
+
+  --font-title-restaurant-size: 28px;
+  --font-subtitle-menu-size: 15.04px;
 
   --font-title-size: 24px;
   --font-text-size: 18px;
@@ -45,8 +52,22 @@ body {
   color: var(--icon-fonctionnement);
 }
 
+.fa-arrow-left {
+  font-size: 20px;
+  // width: 30px;
+  // height: 30px;
+  color: var(--dark-grey);
+  font-weight: bold;
+  padding: 10px;
+}
+
 .fa-heart {
   font-size: 24px;
+}
+
+.euro {
+  color: var(--dark-grey);
+  font-size: 15.04px;
 }
 
 a {
@@ -63,8 +84,7 @@ section {
   font-size: var(--font-title-size);
 }
 
-h2 {
-  font-size: var(--font-title-size);
+h1, h2 {
   margin: 0;
 }
 
@@ -139,12 +159,26 @@ h2 {
     position: relative;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   }
+  // added for pages
+  &__back {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 17px 0px 16px 17px;
+    gap: 42px;
+  }
+  //
+
   &__logo {
     width: 197px;
     height: 36px;
     margin: 14px 0;
     padding-top: 8px;
   }
+  // added for pages
+  &__no-margin {
+    margin: 0;
+  }
+  //
 
   & .location {
     display: flex;
@@ -189,6 +223,7 @@ h2 {
     font-size: var(--font-body-size);
     font-weight: bold;
     border: none;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
   }
 }
 
@@ -300,6 +335,119 @@ h2 {
 }
 
 
+// PAGES
+.image-bg {
+  object-fit: cover;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  height: 100%;
+}
+
+.restaurant-palette {
+  background-color: var(--light-grey);
+  padding: 32px 17px 40px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+
+  &__headline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 0;
+  }
+
+  & .title {
+    font-size: var(--font-title-restaurant-size);
+  }
+}
+
+.menu {
+  padding-top: 40px;
+
+  // width: 100%;
+
+  &__list {
+    display: flex;
+    width: 42px;
+    border-bottom: 3px solid var(--third-color);
+
+    &--title {
+      font-size: var(--font-body-size);
+      font-weight: normal;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15.04px;
+    background-color: var(--footer-btn-text-color);
+    padding: 13.5px 15px;
+    box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.10);
+    width: 100%;
+  }
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+
+    &--subtitle {
+      font-size: var(--font-subtitle-menu-size);
+      margin: 0;
+    }
+  }
+}
+
+.commander {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--main-bg-color);
+
+  &__btn {
+    padding: 16px 48px 15px 49px;
+    border-radius: 24px;
+    color: white;
+    font-size: var(--font-body-size);
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.navbar .location {
+  display: none;
+}
+
+.position {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 292px;
+}
+
+.heart {
+  padding-right: 26px;
+}
+
+section {
+  padding: 0;
+}
+
 
 
 @media (min-width: 1024px) {
@@ -315,11 +463,27 @@ h2 {
 
   // Navbar
   .navbar {
+    // added for pages
+    &__back {
+      // justify-content: flex-start;
+      align-items: center;
+      padding: 17px 0px 16px 17px;
+      gap: 0;
+    }
+    &__arrow {
+      width: 44%;
+    }
+    //
     &__logo {
       width: 200px;
       height: 34px;
       margin: 30px 0;
     }
+    // added for pages
+    &__no-margin {
+      margin: 0;
+    }
+    //
   }
 
   // Headline and btn
@@ -396,6 +560,36 @@ h2 {
       margin-right: 70px;
     }
   }
+
+
+  // PAGES
+  .container {
+    padding: 0;
+  }
+
+  .image-bg {
+    height: 454px;
+  }
+
+  .restaurant-palette {
+    padding: 51px 20px 40px;
+    margin: 0 192px;
+    align-items: center;
+
+    &__headline {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+
+  .menu {
+    width: 66%;
+  }
+
+  .position {
+    top: 496px;
+  }
 }
 
 
@@ -412,11 +606,27 @@ h2 {
 
   // Navbar
   .navbar {
+    // added for pages
+    &__back {
+      // justify-content: flex-start;
+      align-items: center;
+      padding: 17px 0px 16px 17px;
+      gap: 0;
+    }
+    &__arrow {
+      width: 40%;
+    }
+    //
     &__logo {
       width: 200px;
       height: 34px;
       margin: 30px 0;
     }
+    // added for pages
+    &__no-margin {
+      margin: 0;
+    }
+    //
   }
 
   // Headline and btn
@@ -494,5 +704,36 @@ h2 {
     & .contact {
       margin-right: 40px;
     }
+  }
+
+
+  // PAGES
+  .container {
+    padding: 0;
+  }
+
+  .image-bg {
+    height: 400px;
+  }
+
+  .restaurant-palette {
+    padding: 51px 20px 40px;
+    margin: 0 100px;
+    align-items: center;
+
+    &__headline {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      gap: 24px;
+    }
+  }
+
+  .menu {
+    width: 66%;
+  }
+
+  .position {
+    top: 436px;
   }
 }
