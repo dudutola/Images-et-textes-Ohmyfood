@@ -1,0 +1,40 @@
+.menu {
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15.04px;
+    background-color: var(--footer-btn-text-color);
+    padding: 13.5px 15px;
+    margin-top: 12px;
+    box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.10);
+  }
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+
+    &--subtitle {
+      font-size: var(--font-subtitle-menu-size);
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0;
+  }
+
+  .menu {
+    width: 66%;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 1024px) {
+  .container {
+    padding: 0;
+  }
+
+  .menu {
+    width: 66%;
+  }
+}
