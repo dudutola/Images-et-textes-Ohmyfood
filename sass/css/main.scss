@@ -4,6 +4,7 @@
 
 @import './components/card.scss';
 @import './components/cards-menu.scss';
+@import './components/button.scss';
 
 @import './layout/_navbar.scss';
 @import './layout/_footer.scss';
@@ -92,47 +93,6 @@ h1, h2 {
 }
 
 // MOBILE //
-// .card {
-//   display: flex;
-//   flex-direction: column;
-//   background-color: white;
-//   // width: 89%;
-//   border-radius: 15px;
-//   // box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-
-//   &__badge {
-//     display: flex;
-//     flex-direction: row-reverse;
-
-//     &--nouveau {
-//       position: absolute;
-//       font-size: var(--font-new-alert-size);
-//       border: none;
-//       background-color: var(--third-color);
-//       color: var(--dark-green);
-//       padding: 7px 9px 6px;
-//       margin-top: 15px;
-//       margin-right: 15px;
-//       border-radius: 2px;
-//       z-index: 2;
-//     }
-//   }
-//   &__content {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     margin: 16px 25px 16px 16px;
-//   }
-//   &__title {
-//     margin: 0;
-//     margin-bottom: 8px;
-//     font-size: var(--font-text-size);
-//   }
-//   &__subtitle {
-//     margin: 0;
-//     font-size: var(--font-card-subtitle-size);
-//   }
-// }
 
 .img-card {
   // width: 346px;
@@ -162,17 +122,8 @@ h1, h2 {
   }
   &__text {
     font-size: var(--font-text-size);
-    margin-bottom: 24px;
+    margin-bottom: 27px;
     color: var(--dark-grey);
-  }
-  &__btn {
-    padding: 13px 18px;
-    border-radius: 24px;
-    color: white;
-    font-size: var(--font-body-size);
-    font-weight: bold;
-    border: none;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25)
   }
 }
 
@@ -335,12 +286,6 @@ h1, h2 {
 
   &__btn {
     padding: 16px 48px 15px 49px;
-    border-radius: 24px;
-    color: white;
-    font-size: var(--font-body-size);
-    font-weight: bold;
-    border: none;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
 }
 
