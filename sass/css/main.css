@@ -414,6 +414,9 @@ h1, h2 {
 .fonctionnement .icon {
   font-size: 20px;
 }
+.fonctionnement .icon:hover {
+  color: var(--primary-color);
+}
 
 .restaurant-bg {
   background-color: var(--main-bg-color);
