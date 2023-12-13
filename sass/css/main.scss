@@ -32,8 +32,7 @@
   --light-grey: #F6F6F6;
   --footer-btn-text-color: #FFFFFF;
   --icon-fonctionnement: #7E7E7E;
-
-
+  --gradient: linear-gradient( #9356DC, #FF79DA);
   --font-title-restaurant-size: 28px;
   --font-subtitle-menu-size: 15.04px;
 
@@ -67,7 +66,28 @@ body {
 
 .fa-heart {
   font-size: 24px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+
+  &:hover,
+  &:active {
+    font-weight: bold;
+    background-image: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  // &:checked {
+  //   font-weight: bold;
+  //   background-image: var(--gradient);
+  //   background-clip: text;
+  //   -webkit-background-clip: text;
+  //   color: transparent;
+  //   // opacity: 1;
+  // }
 }
+
 
 .euro {
   color: var(--dark-grey);
