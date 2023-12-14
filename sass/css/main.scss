@@ -11,7 +11,6 @@
 
 * {
   font-family: 'Roboto', sans-serif;
-  // font-weight: normal;
 
   .navbar__logo, .title, .infos__logo {
     font-family: 'Shrikhand';
@@ -64,29 +63,46 @@ body {
   padding: 10px;
 }
 
-.fa-heart {
-  font-size: 24px;
-  cursor: pointer;
-  transition: all 1s ease-in-out;
 
-  &:hover,
-  &:active {
-    font-weight: bold;
-    background-image: var(--gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
+.heart-check {
+  display: none;
+}
+
+.favorite {
+  cursor: pointer;
+  padding-top: 4px;
+
+  & i {
+    position: absolute;
   }
 
-  // &:checked {
-  //   font-weight: bold;
-  //   background-image: var(--gradient);
-  //   background-clip: text;
-  //   -webkit-background-clip: text;
-  //   color: transparent;
-  //   // opacity: 1;
-  // }
+  &__full {
+    font-weight: bold;
+    opacity: 0;
+    transition: all 1s;
+  }
 }
+
+.like {
+  padding-bottom: 26px;
+  padding-right: 29px;
+}
+
+.heart-check:checked + .favorite i.favorite__full {
+  display: inline;
+  opacity: 1;
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 300ms ease-out;
+}
+
+
+.fa-heart {
+  font-size: 29px;
+}
+
 
 
 .euro {
@@ -249,10 +265,7 @@ h1, h2 {
 
   &__headline {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 0;
+    gap: 44px;
   }
 
   & .title {
