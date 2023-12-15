@@ -70,7 +70,8 @@ body {
 
 .favorite {
   cursor: pointer;
-  padding-top: 4px;
+  // padding-top: 4px;
+  padding-bottom: 32px;
 
   & i {
     position: absolute;
