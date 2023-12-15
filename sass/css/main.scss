@@ -8,11 +8,12 @@
 
 @import './layout/_navbar.scss';
 @import './layout/_footer.scss';
+@import './layout/_loader.scss';
 
 * {
   font-family: 'Roboto', sans-serif;
 
-  .navbar__logo, .title, .infos__logo {
+  .navbar__logo, .title, .infos__logo, .quote {
     font-family: 'Shrikhand';
     font-weight: normal;
   }
@@ -32,6 +33,7 @@
   --footer-btn-text-color: #FFFFFF;
   --icon-fonctionnement: #7E7E7E;
   --gradient: linear-gradient( #9356DC, #FF79DA);
+  --gradient-2: linear-gradient( #008766, #99E2D0);
   --font-title-restaurant-size: 28px;
   --font-subtitle-menu-size: 15.04px;
 
