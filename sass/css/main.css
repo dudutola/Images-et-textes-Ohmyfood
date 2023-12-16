@@ -672,10 +672,10 @@ h1, h2 {
 }
 .restaurant__headline {
   display: flex;
-  gap: 44px;
 }
 .restaurant .title {
   font-size: var(--font-title-restaurant-size);
+  width: 86%;
 }
 
 .menu {
@@ -711,6 +711,7 @@ h1, h2 {
 
 .heart {
   padding-right: 26px;
+  padding-top: 2px;
 }
 
 @media (min-width: 1024px) {
@@ -720,8 +721,11 @@ h1, h2 {
   .card__content {
     margin: 16px 25px 16px 18px;
   }
-  .headline__title {
+  .restaurant__headline__title {
     font-size: 40px;
+  }
+  .restaurant .title {
+    width: 100%;
   }
   .fonctionnement {
     margin: 0;
@@ -769,8 +773,11 @@ h1, h2 {
   .card__content {
     margin: 16px 25px 16px 18px;
   }
-  .headline__title {
+  .restaurant__headline__title {
     font-size: 40px;
+  }
+  .restaurant .title {
+    width: 100%;
   }
   .fonctionnement {
     margin: 0;

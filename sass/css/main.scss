@@ -268,11 +268,11 @@ h1, h2 {
 
   &__headline {
     display: flex;
-    gap: 44px;
   }
 
   & .title {
     font-size: var(--font-title-restaurant-size);
+    width: 86%;
   }
 }
 
@@ -340,6 +340,7 @@ h1, h2 {
 
 .heart {
   padding-right: 26px;
+  padding-top: 2px;
 }
 
 
@@ -355,9 +356,14 @@ h1, h2 {
   }
 
   // Headline and btn
-  .headline {
-    &__title {
-      font-size: 40px;
+  .restaurant {
+    &__headline {
+      &__title {
+        font-size: 40px;
+      }
+    }
+    & .title {
+      width: 100%;
     }
   }
 
@@ -473,9 +479,14 @@ h1, h2 {
   }
 
   // Headline and btn
-  .headline {
-    &__title {
-      font-size: 40px;
+  .restaurant {
+    &__headline {
+      &__title {
+        font-size: 40px;
+      }
+    }
+    & .title {
+      width: 100%;
     }
   }
 
