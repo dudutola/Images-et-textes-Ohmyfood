@@ -1,0 +1,36 @@
+.heart-check {
+  display: none;
+}
+
+.favorite {
+  cursor: pointer;
+  padding-bottom: 32px;
+
+  & i {
+    position: absolute;
+  }
+
+  &__full {
+    opacity: 0;
+    background-image: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 2s ease-out;
+  }
+}
+
+.like {
+  padding-bottom: 26px;
+  padding-right: 29px;
+}
+
+.heart-check:checked + .favorite i.favorite__full {
+  display: inline;
+  opacity: 1;
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 300ms ease-out;
+}

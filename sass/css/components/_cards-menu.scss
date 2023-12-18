@@ -1,112 +1,98 @@
 .menu {
-  &__check {
-    display: none;
-  }
-
   &__card {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     border-radius: 15.04px;
-    flex: 1;
-    cursor: pointer;
+    position: relative;
+    overflow: hidden;
     background-color: var(--footer-btn-text-color);
     padding: 0;
     margin-top: 12px;
     box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.10);
 
-
     &:hover .price {
-      margin-right: 34px;
-      transition: 400ms ease-in-out;
+      margin-right: 70px;
     }
-
-
-    @keyframes green-check {
-      from {
-        transform: translateX(0%);
-      }
-
-      to {
-        transform: translateX(6px);
-      }
-    }
-
     &:hover .menu__check {
-      // margin-right: -10px;
-      width: 70px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      font-size: 24px;
-      background-color: var(--third-color);
-      border-top-right-radius: 15.04px;
-      border-bottom-right-radius: 15.04px;
-      animation: green-check 400ms ease-in-out reverse;
-      position: absolute;
-      right: 0;
-      top: 0;
-
-      & .fa-circle-check {
-        color: white;
-      }
+      margin-right: -10px;
     }
 
-
-    &:hover .menu__infos,
-    &:hover .title {
-      overflow: hidden;
-      width: 220px;
-      // height: 1.2em;/
-      white-space: nowrap;
-
-      &--subtitle,
-      &:hover.card__title {
+    &:hover .menu__infos {
+      &--subtitle {
         text-overflow: ellipsis;
         overflow: hidden;
       }
     }
   }
 
-  & .price {
-    margin-right: 15px;
-    padding: 13.5px 0;
-  }
-
   &__content {
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    // padding: 13.5px 15px;
-    width: 100%;
-
-    &:hover {
-      width: 76%;
-    }
+    flex: 1;
+    cursor: pointer;
+    overflow: hidden;
 
     &--infos {
-      width: 82%;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
       padding: 13.5px 15px;
+    }
+    &:hover .menu__infos {
+      width: 220px;
     }
   }
 
   &__infos {
-      &--subtitle {
+    overflow: hidden;
+    white-space: nowrap;
+
+    &--subtitle {
       font-size: var(--font-subtitle-menu-size);
       margin: 0;
     }
   }
+
+  & .price {
+    padding: 13.5px 0;
+    margin-right: 15px;
+    transition: 400ms ease-in-out;
+  }
+
+  &__check {
+    width: 70px;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    background-color: var(--third-color);
+    border-top-right-radius: 15.04px;
+    border-bottom-right-radius: 15.04px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 400ms ease-in-out;
+    margin-right: -100px;
+
+    & .fa-circle-check {
+      color: white;
+      margin-left: 18px;
+    }
+  }
 }
 
-
-
 .menus {
-  transform-origin: top left;
-  animation: menu 660ms both;
-
-  & .menu__card {
-    animation: menu__item 450ms 275ms both;
+  &__1 {
+    animation: menus 1s ease-in-out forwards;
+  }
+  &__2 {
+    animation: menus 1.6s ease-in-out forwards;
+  }
+  &__3 {
+    animation: menus 2.2s ease-in-out forwards;
   }
 
   & .menu__item--1 {
@@ -123,6 +109,15 @@
   }
 }
 
+@keyframes menus {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes menu {
   0% {
     transform: scale(0, 0.6);
@@ -132,13 +127,6 @@
     animation-timing-function: cubic-bezier(0.70, 0.01, 0.2, 0.80);
   }
 }
-
-@keyframes menu__item {
-  0% {
-    transform: scaleY(-110%);
-  }
-}
-
 
 // Desktop
 @media (min-width: 1024px) {
@@ -154,12 +142,7 @@
       &:hover .title {
         width: 100%;
       }
-
-      // &:hover .menu__check {
-      //   width: 70px;
-      // }
     }
-
     &__content:hover {
       width: 90%;
     }
@@ -185,7 +168,6 @@
         width: 100%;
       }
     }
-
     &__content:hover {
       width: 84%;
     }

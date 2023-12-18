@@ -12,3 +12,11 @@
     background: linear-gradient(#fc91de, #9f6ed9);
   }
 }
+
+.commander {
+  text-align: center;
+
+  &__btn {
+    padding: 16px 48px 15px 49px;
+  }
+}
