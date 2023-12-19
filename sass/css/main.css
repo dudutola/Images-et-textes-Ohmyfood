@@ -662,6 +662,9 @@ h1, h2 {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   width: 260px;
 }
+.fonctionnement__content:hover {
+  background-color: rgba(217, 205, 233, 0.5098039216);
+}
 .fonctionnement .icon {
   font-size: 20px;
 }
