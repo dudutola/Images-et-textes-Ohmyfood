@@ -121,6 +121,11 @@
   overflow: hidden;
   padding: 13.5px 15px;
 }
+.menu__content--infos:hover .card__title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .menu__content:hover .menu__infos {
   width: 220px;
 }
