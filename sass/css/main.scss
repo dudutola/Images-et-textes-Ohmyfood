@@ -164,14 +164,12 @@ h1, h2 {
     &:hover {
       background-color: #d9cde982;;
     }
+    &:hover > i.icon {
+      color: var(--primary-color);
+    }
   }
   & .icon {
     font-size: 20px;
-
-    &:hover,
-    &:active {
-      color: var(--primary-color);
-    }
   }
 }
 
@@ -268,14 +266,14 @@ h1, h2 {
 
     &__cards {
       display: flex;
-      gap: 24px;
+      gap: 32px;
     }
     &__card {
       padding-bottom: 0;
     }
     &__content {
-      padding: 28px;
-      width: 80%;
+      padding: 28px 44px 28px 30px;
+      width: 100%;
     }
     & a {
       width: 30%;

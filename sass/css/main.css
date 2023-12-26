@@ -665,11 +665,11 @@ h1, h2 {
 .fonctionnement__content:hover {
   background-color: rgba(217, 205, 233, 0.5098039216);
 }
+.fonctionnement__content:hover > i.icon {
+  color: var(--primary-color);
+}
 .fonctionnement .icon {
   font-size: 20px;
-}
-.fonctionnement .icon:hover, .fonctionnement .icon:active {
-  color: var(--primary-color);
 }
 
 .restaurant-bg {
@@ -749,14 +749,14 @@ h1, h2 {
   }
   .fonctionnement__cards {
     display: flex;
-    gap: 24px;
+    gap: 32px;
   }
   .fonctionnement__card {
     padding-bottom: 0;
   }
   .fonctionnement__content {
-    padding: 28px;
-    width: 80%;
+    padding: 28px 44px 28px 30px;
+    width: 100%;
   }
   .fonctionnement a {
     width: 30%;
