@@ -13,9 +13,10 @@
   &__content {
     display: flex;
     flex-direction: column;
-    align-items: normal;
+    // align-items: normal;
     gap: 7px;
-    padding-top: 16px;
+    list-style-type: none;
+    padding-left: 0;
 
     &--position {
       display: flex;
@@ -42,7 +43,7 @@
     &__content {
       flex-direction: row;
       align-items: center;
-      padding-top: 0;
+      margin: 0;
 
       &--position {
         display: flex;
@@ -73,7 +74,7 @@
     &__content {
       flex-direction: row;
       align-items: center;
-      padding-top: 0;
+      margin: 0;
 
       &--position {
         display: flex;

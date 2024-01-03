@@ -13,7 +13,7 @@
 * {
   font-family: 'Roboto', sans-serif;
 
-  .navbar__logo, .title, .infos__logo, .quote {
+  .title, .infos__logo, .quote {
     font-family: 'Shrikhand';
     font-weight: normal;
   }
@@ -149,6 +149,11 @@ h1, h2 {
     height: 24px;
     position: absolute;
     z-index: 1;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
   }
   &__content {
     display: flex;
