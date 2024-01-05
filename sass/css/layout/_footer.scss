@@ -13,10 +13,10 @@
   &__content {
     display: flex;
     flex-direction: column;
-    // align-items: normal;
-    gap: 7px;
+    gap: 9px;
     list-style-type: none;
     padding-left: 0;
+    margin-bottom: 0;
 
     &--position {
       display: flex;
@@ -33,7 +33,7 @@
 @media (min-width: 1024px) {
   .infos {
     &--padding {
-      padding: 64px 25px 30px;
+      padding: 57px 25px 30px;
       display: flex;
       flex-direction: row-reverse;
     }
@@ -64,7 +64,7 @@
 @media (min-width: 767.98px) and (max-width: 1024px) {
   .infos {
     &--padding {
-      padding: 64px 25px 30px;
+      padding: 57px 25px 30px;
       display: flex;
       flex-direction: row-reverse;
     }
