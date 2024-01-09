@@ -119,7 +119,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 13.5px 15px;
+  padding: 13.5px 0 13.5px 15px;
 }
 .menu__content--infos:hover .card__title {
   text-overflow: ellipsis;
@@ -700,7 +700,7 @@ h1, h2 {
 
 .restaurant {
   background-color: var(--light-grey);
-  padding: 32px 17px 40px;
+  padding: 32px 13px 40px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   margin: 0;
@@ -711,7 +711,7 @@ h1, h2 {
 .restaurant__headline {
   display: flex;
 }
-.restaurant .title {
+.restaurant__headline .title {
   font-size: var(--font-title-restaurant-size);
   width: 86%;
 }
