@@ -374,7 +374,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 42px;
+  gap: 18px;
 }
 .navbar__logo {
   width: 197px;
