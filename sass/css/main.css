@@ -423,7 +423,7 @@
     gap: 0;
   }
   .navbar__arrow {
-    width: 40%;
+    width: 36%;
   }
   .navbar__logo {
     width: 200px;
@@ -662,7 +662,7 @@ h1, h2 {
   position: relative;
   left: 12px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  width: 300px;
+  width: 244px;
 }
 .fonctionnement__content:hover {
   background-color: rgba(217, 205, 233, 0.5098039216);
